@@ -16,7 +16,9 @@ it in a cron or systemd timer.
 
 To install, for now:
 1. clone this repository;
-2. run `uv sync`;
+2. run `uv sync`
+   ([install `uv` first](https://docs.astral.sh/uv/getting-started/installation/)
+   if needs be);
 3. duplicate the `newsletters.example.toml` into your own `newsletters.toml`.
 
 Then, run `atomise`.
@@ -24,7 +26,7 @@ Then, run `atomise`.
 $ uv run atomise
 ```
 
-It does not print anything by default, add `-v/-vv/-vvv` if you want details.
+It does not print anything by default; add `-v/-vv/-vvv` if you want details.
 Run with `--help` for other options.
 
 
