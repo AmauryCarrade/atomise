@@ -1,0 +1,75 @@
+# Used to generate feed filenames. If changed, generated filenames will change.
+# Generate a random secret with `openssl rand -base64 32`.
+secret = ""
+
+# Base URL (for index generation)
+base_url = "https://atomise.example.com"
+
+# Folder where Atom feeds will be generated.
+# Should be exposed by any static server, e.g. nginx.
+feeds_dir = "./data/feeds/"
+
+# Folder where `feeds.md` file will be generated, containing all feeds URLs to use in
+# your feed
+index_dir = "./data/"
+
+
+# As many mailboxes as you want, containing as many newsletters as you want.
+# Each newsletter will be converted into an Atom feed.
+[[mailbox]]
+
+host = "mail.example.com"
+port = 993
+username = "you@example.com"
+password = ""
+tls = true
+
+
+[mailbox.newsletter.example-newsletter]
+
+# Newsletter’s title (will be the Atom feed name), and description.
+title = "Example"
+description = ""
+
+# Newsletter’s link, if empty, will be the feed URL.
+link = "https://example.com"
+
+# Filters to get only mails corresponding to this newsletter.
+# All filters must pass for a mail to be included in the newsletter.
+# If you need a more granular approach, use `imap_raw_search`.
+# Except “folder”, each of these filters is a “contains” filter, i.e. they will
+# check if the given value(s) are somewhere to be found in their scope.
+# All filters can either be strings or list of strings to be ORed.
+# Empty, null, or missing filters, are ignored.
+#
+# - folder: folder(s) to search into. If empty or missing, searches all folders.
+# - from: mails from this/these (if array) senders. Required.
+# - to: mails to this/these (if array) recipients.
+# - subject: mails including this in their subject.
+# - body: mails including this in their body (HTML or text).
+folder = ""
+from = "newsletter@example.com"
+to = ""
+subject = "Example Digest"
+body = ""
+
+# If non-empty, ignores everything above (except folder) and use these
+# raw IMAP search criteria instead.
+# See: https://www.rfc-editor.org/info/rfc3501/#section-6.4.4
+imap_raw_search = ""
+
+# If true, matching emails will be marked as read when included in the newsletter,
+# so you do not have to double-read them.
+mark_as_read = false
+
+# We’ll first keep everything matching `content_css_selectors`; then
+# from that remove everything matching `excluded_css_selectors`.
+# Both coma-separated, like usual CSS selectors.
+content_css_selectors = ""
+excluded_css_selectors = ""
+
+
+# Add as many newsletters as you want in the same mailbox by inserting another
+# [mailbox.newsletter.newsletter-name] after.
+# Connect to as many mailbox as you want by adding another [[mailbox]] section
+# with the same structure.
