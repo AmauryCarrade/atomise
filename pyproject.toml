@@ -9,7 +9,7 @@ dependencies = [
     "python-slugify",
     "beautifulsoup4",
     "lxml-html-clean",
-    "click"
+    "click",
 ]
 
 [project.scripts]
