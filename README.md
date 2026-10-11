@@ -8,8 +8,11 @@ corresponding to given filter(s) into Atom feed(s), then write these feeds in
 a folder. It is then your responsibility to expose these feeds over HTTP(S),
 e.g. using nginx.
 
-This tool being stateless, to update continuously the feeds, you must run
+This tool being stateless, to update continuously the feeds, you shall run
 it in a cron or systemd timer.
+
+No generative artificial intelligence was used, nor will be, in the making of
+this project.
 
 
 ## Installation and usage
