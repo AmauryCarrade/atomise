@@ -81,7 +81,12 @@ def main(config, verbose):
                             )
 
                 feed_filename_hash = hashlib.sha1(
-                    (newsletters_config["secret"] + newsletter_id).encode()
+                    (
+                        newsletters_config["secret"]
+                        + newsletter_id
+                        + mailbox_config["host"].strip().lower()
+                        + mailbox_config["username"].strip().lower()
+                    ).encode()
                 ).hexdigest()
 
                 feed_filename = f"{feed_filename_hash}-{slugify(newsletter_id)}.atom"

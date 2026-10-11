@@ -70,6 +70,8 @@ excluded_css_selectors = ""
 
 
 # Add as many newsletters as you want in the same mailbox by inserting another
-# [mailbox.newsletter.newsletter-name] after.
+# [mailbox.newsletter.newsletter-name] after. Each `newsletter-name` part must
+# be unique per mailbox and will be used to generate the Atom feed name.
+
 # Connect to as many mailbox as you want by adding another [[mailbox]] section
 # with the same structure.
