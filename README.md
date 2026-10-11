@@ -18,7 +18,7 @@ To install, for now:
 1. clone this repository;
 2. run `uv sync`
    ([install `uv` first](https://docs.astral.sh/uv/getting-started/installation/)
-   if needs be);
+   if needs be, or use another package manager, as your convenience);
 3. duplicate the `newsletters.example.toml` into your own `newsletters.toml`.
 
 Then, run `atomise`.
