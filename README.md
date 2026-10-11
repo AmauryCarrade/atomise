@@ -12,9 +12,26 @@ This tool being stateless, to update continuously the feeds, you must run
 it in a cron or systemd timer.
 
 
+## Installation and usage
+
+To install, for now:
+1. clone this repository;
+2. run `uv sync`;
+3. duplicate the `newsletters.example.toml` into your own `newsletters.toml`.
+
+Then, run `atomise`.
+```bash
+$ uv run atomise
+```
+
+It does not print anything by default, add `-v/-vv/-vvv` if you want details.
+Run with `--help` for other options.
+
+
 ## State of the project
 
-This project is still in progress. Here’s where we are.
+This project is still in progress. Here’s where we are. These items are not
+ordered.
 
 - [x] Read mails into Atom feeds.
 - [x] Post-process HTML mails for decent display in Atom/RSS feeds reader.
@@ -29,6 +46,7 @@ This project is still in progress. Here’s where we are.
 - [ ] Generate recap and index file with generated feeds’ URLs, for convenience.
 - [ ] Write full documentation.
 - [ ] Add tests to HTML post-processors, and test more edge cases.
+- [ ] Install `atomise` with pip and run it without `uv`.
 
 
 ## Licence
