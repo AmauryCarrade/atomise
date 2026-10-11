@@ -42,12 +42,12 @@ link = "https://example.com"
 # All filters can either be strings or list of strings to be ORed.
 # Empty, null, or missing filters, are ignored.
 #
-# - folder: folder(s) to search into. If empty or missing, searches all folders.
+# - folders: folder(s) to search into. If empty or missing, searches all folders.
 # - from: mails from this/these (if array) senders. Required.
 # - to: mails to this/these (if array) recipients.
 # - subject: mails including this in their subject.
 # - body: mails including this in their body (HTML or text).
-folder = ""
+folders = ""
 from = "newsletter@example.com"
 to = ""
 subject = "Example Digest"
