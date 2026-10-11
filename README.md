@@ -27,6 +27,8 @@ This project is still in progress. Here’s where we are.
 - [ ] Per-feed update delay, to avoid searching the mailbox at all if the script
       is called again too soon.
 - [ ] Generate recap and index file with generated feeds’ URLs, for convenience.
+- [ ] Write full documentation.
+- [ ] Add tests to HTML post-processors, and test more edge cases.
 
 
 ## Licence
