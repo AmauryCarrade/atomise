@@ -1,6 +1,10 @@
 [project]
 name = "atomise"
 version = "0.1.0"
+
+license = "CECILL-B"
+license-files = ["LICENSE"]
+
 requires-python = ">=3.9"
 dependencies = [
     "toml",
